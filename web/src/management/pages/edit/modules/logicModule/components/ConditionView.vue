@@ -9,6 +9,7 @@
         class="select field-select"
         v-model="conditionField"
         placeholder="请选择题目"
+        no-data-text="无数据"
         @change="(val: any) => handleChange(conditionNode, 'field', val)"
       >
         <el-option v-for="{ label, value } in fieldList" :key="value" :label="label" :value="value">
@@ -24,6 +25,7 @@
       <el-select
         v-model="conditionValue"
         placeholder="请选择选项"
+        no-data-text="无数据"
         multiple
         @change="(val: any) => handleChange(conditionNode, 'value', val)"
       >
@@ -156,7 +158,7 @@ const handleDelete = (id: any) => {
     position: absolute;
     bottom: -8px;
   }
-  &:not(:last-child)::after {
+  &::after {
     content: '';
     display: block;
     width: calc(100% - 32px);

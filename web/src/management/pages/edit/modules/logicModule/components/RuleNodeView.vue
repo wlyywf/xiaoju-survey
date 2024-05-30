@@ -7,14 +7,16 @@
       :inline="true"
       :model="ruleNode"
     >
-      <ConditionView
-        v-for="(conditionNode, index) in ruleNode.conditions"
-        :key="conditionNode.id"
-        :index="index"
-        :ruleNode="ruleNode"
-        :conditionNode="conditionNode"
-        @delete="handleDeleteCondition"
-      ></ConditionView>
+      <div>
+        <ConditionView
+          v-for="(conditionNode, index) in ruleNode.conditions"
+          :key="conditionNode.id"
+          :index="index"
+          :ruleNode="ruleNode"
+          :conditionNode="conditionNode"
+          @delete="handleDeleteCondition"
+        ></ConditionView>
+      </div>
       <div class="target-wrapper">
         <div class="line">
           <span class="desc">则显示</span>
