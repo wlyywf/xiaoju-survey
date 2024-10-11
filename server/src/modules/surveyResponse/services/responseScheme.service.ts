@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { ResponseSchema } from 'src/models/responseSchema.entity';
-import { RECORD_STATUS, RECORD_SUB_STATUS } from 'src/enums';
+import { ResponseSchema } from '../../../models/responseSchema.entity';
+import { RECORD_STATUS, RECORD_SUB_STATUS } from '../../../enums';
 
 @Injectable()
 export class ResponseSchemaService {

@@ -1,17 +1,17 @@
 import { Controller, Post, Body, HttpCode } from '@nestjs/common';
-import { HttpException } from 'src/exceptions/httpException';
-import { SurveyNotFoundException } from 'src/exceptions/surveyNotFoundException';
-import { checkSign } from 'src/utils/checkSign';
-import { ENCRYPT_TYPE } from 'src/enums/encrypt';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { getPushingData } from 'src/utils/messagePushing';
-import { RECORD_SUB_STATUS } from 'src/enums';
+import { HttpException } from '../../../exceptions/httpException';
+import { SurveyNotFoundException } from '../../../exceptions/surveyNotFoundException';
+import { checkSign } from '../../../utils/checkSign';
+import { ENCRYPT_TYPE } from '../../../enums/encrypt';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { getPushingData } from '../../../utils/messagePushing';
+import { RECORD_SUB_STATUS } from '../../../enums';
 
 import { ResponseSchemaService } from '../services/responseScheme.service';
 import { SurveyResponseService } from '../services/surveyResponse.service';
 import { ClientEncryptService } from '../services/clientEncrypt.service';
 import { MessagePushingTaskService } from '../../message/services/messagePushingTask.service';
-// import { RedisService } from 'src/modules/redis/redis.service';
+// import { RedisService } from '../../../modules/redis/redis.service';
 
 import moment from 'moment';
 import * as Joi from 'joi';
@@ -19,11 +19,11 @@ import * as forge from 'node-forge';
 import { ApiTags } from '@nestjs/swagger';
 
 import { CounterService } from '../services/counter.service';
-import { Logger } from 'src/logger';
-import { WhitelistType } from 'src/interfaces/survey';
-import { UserService } from 'src/modules/auth/services/user.service';
-import { WorkspaceMemberService } from 'src/modules/workspace/services/workspaceMember.service';
-import { QUESTION_TYPE } from 'src/enums/question';
+import { Logger } from '../../../logger';
+import { WhitelistType } from '../../../interfaces/survey';
+import { UserService } from '../../../modules/auth/services/user.service';
+import { WorkspaceMemberService } from '../../../modules/workspace/services/workspaceMember.service';
+import { QUESTION_TYPE } from '../../../enums/question';
 
 const optionQuestionType: Array<string> = [
   QUESTION_TYPE.RADIO,

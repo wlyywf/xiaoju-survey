@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import {
   MESSAGE_PUSHING_TYPE,
   MESSAGE_PUSHING_HOOK,
-} from 'src/enums/messagePushing';
+} from '../../../enums/messagePushing';
 
 export class UpdateMessagePushingTaskDto {
   @ApiProperty({ description: '任务名称', required: false })

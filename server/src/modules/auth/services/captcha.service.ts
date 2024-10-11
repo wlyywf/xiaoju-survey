@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { Captcha } from 'src/models/captcha.entity';
+import { Captcha } from '../../../models/captcha.entity';
 import { ObjectId } from 'mongodb';
 
 @Injectable()

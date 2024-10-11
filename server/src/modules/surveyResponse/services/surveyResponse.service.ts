@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { SurveyResponse } from 'src/models/surveyResponse.entity';
+import { SurveyResponse } from '../../../models/surveyResponse.entity';
 
 @Injectable()
 export class SurveyResponseService {

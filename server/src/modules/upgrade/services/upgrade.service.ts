@@ -1,21 +1,21 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { SurveyMeta } from 'src/models/surveyMeta.entity';
-import { ResponseSchema } from 'src/models/responseSchema.entity';
-import { RECORD_STATUS, RECORD_SUB_STATUS } from 'src/enums';
-import { Workspace } from 'src/models/workspace.entity';
-import { Collaborator } from 'src/models/collaborator.entity';
-import { Counter } from 'src/models/counter.entity';
-import { DownloadTask } from 'src/models/downloadTask.entity';
-import { MessagePushingLog } from 'src/models/messagePushingLog.entity';
-import { MessagePushingTask } from 'src/models/messagePushingTask.entity';
-import { Session } from 'src/models/session.entity';
-import { SurveyConf } from 'src/models/surveyConf.entity';
-import { User } from 'src/models/user.entity';
-import { WorkspaceMember } from 'src/models/workspaceMember.entity';
-import { SESSION_STATUS } from 'src/enums/surveySessionStatus';
-import { Logger } from 'src/logger';
+import { SurveyMeta } from '../../../models/surveyMeta.entity';
+import { ResponseSchema } from '../../../models/responseSchema.entity';
+import { RECORD_STATUS, RECORD_SUB_STATUS } from '../../../enums';
+import { Workspace } from '../../../models/workspace.entity';
+import { Collaborator } from '../../../models/collaborator.entity';
+import { Counter } from '../../../models/counter.entity';
+import { DownloadTask } from '../../../models/downloadTask.entity';
+import { MessagePushingLog } from '../../../models/messagePushingLog.entity';
+import { MessagePushingTask } from '../../../models/messagePushingTask.entity';
+import { Session } from '../../../models/session.entity';
+import { SurveyConf } from '../../../models/surveyConf.entity';
+import { User } from '../../../models/user.entity';
+import { WorkspaceMember } from '../../../models/workspaceMember.entity';
+import { SESSION_STATUS } from '../../../enums/surveySessionStatus';
+import { Logger } from '../../../logger';
 
 @Injectable()
 export class UpgradeService {

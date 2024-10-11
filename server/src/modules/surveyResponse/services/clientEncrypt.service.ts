@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { ClientEncrypt } from 'src/models/clientEncrypt.entity';
-import { ENCRYPT_TYPE } from 'src/enums/encrypt';
+import { ClientEncrypt } from '../../../models/clientEncrypt.entity';
+import { ENCRYPT_TYPE } from '../../../enums/encrypt';
 import { ObjectId } from 'mongodb';
 
 @Injectable()

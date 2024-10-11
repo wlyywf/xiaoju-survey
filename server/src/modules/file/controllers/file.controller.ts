@@ -12,10 +12,10 @@ import { ConfigService } from '@nestjs/config';
 import { ApiTags } from '@nestjs/swagger';
 
 import { FileService } from '../services/file.service';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { AuthService } from 'src/modules/auth/services/auth.service';
-import { AuthenticationException } from 'src/exceptions/authException';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { AuthService } from '../../../modules/auth/services/auth.service';
+import { AuthenticationException } from '../../../exceptions/authException';
 
 @ApiTags('file')
 @Controller('/api/file')

@@ -3,7 +3,7 @@ import { BaseEntity } from './base.entity';
 import {
   MESSAGE_PUSHING_TYPE,
   MESSAGE_PUSHING_HOOK,
-} from 'src/enums/messagePushing';
+} from '../enums/messagePushing';
 
 @Entity({ name: 'messagePushingTask' })
 export class MessagePushingTask extends BaseEntity {

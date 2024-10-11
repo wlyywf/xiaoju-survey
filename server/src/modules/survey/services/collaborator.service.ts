@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Collaborator } from 'src/models/collaborator.entity';
+import { Collaborator } from '../../../models/collaborator.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
 import { ObjectId } from 'mongodb';
-import { Logger } from 'src/logger';
+import { Logger } from '../../../logger';
 
 @Injectable()
 export class CollaboratorService {

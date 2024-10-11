@@ -1,5 +1,5 @@
 import { SecurityPlugin } from '../interface';
-import { SurveyResponse } from 'src/models/surveyResponse.entity';
+import { SurveyResponse } from '../../models/surveyResponse.entity';
 import { decryptData, encryptData, isDataSensitive, maskData } from './utils';
 
 export class ResponseSecurityPlugin implements SecurityPlugin {

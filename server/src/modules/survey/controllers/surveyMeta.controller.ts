@@ -15,15 +15,15 @@ import { ApiTags } from '@nestjs/swagger';
 
 import { SurveyMetaService } from '../services/surveyMeta.service';
 
-import { getFilter, getOrder } from 'src/utils/surveyUtil';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { Authentication } from 'src/guards/authentication.guard';
-import { Logger } from 'src/logger';
-import { SurveyGuard } from 'src/guards/survey.guard';
-import { SURVEY_PERMISSION } from 'src/enums/surveyPermission';
-import { WorkspaceGuard } from 'src/guards/workspace.guard';
-import { PERMISSION as WORKSPACE_PERMISSION } from 'src/enums/workspace';
+import { getFilter, getOrder } from '../../../utils/surveyUtil';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { Authentication } from '../../../guards/authentication.guard';
+import { Logger } from '../../../logger';
+import { SurveyGuard } from '../../../guards/survey.guard';
+import { SURVEY_PERMISSION } from '../../../enums/surveyPermission';
+import { WorkspaceGuard } from '../../../guards/workspace.guard';
+import { PERMISSION as WORKSPACE_PERMISSION } from '../../../enums/workspace';
 
 import { GetSurveyListDto } from '../dto/getSurveyMetaList.dto';
 import { CollaboratorService } from '../services/collaborator.service';

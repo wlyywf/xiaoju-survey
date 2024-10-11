@@ -11,12 +11,12 @@ import { ApiTags } from '@nestjs/swagger';
 
 import { SurveyHistoryService } from '../services/surveyHistory.service';
 
-import { Authentication } from 'src/guards/authentication.guard';
-import { SurveyGuard } from 'src/guards/survey.guard';
-import { SURVEY_PERMISSION } from 'src/enums/surveyPermission';
-import { Logger } from 'src/logger';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { Authentication } from '../../../guards/authentication.guard';
+import { SurveyGuard } from '../../../guards/survey.guard';
+import { SURVEY_PERMISSION } from '../../../enums/surveyPermission';
+import { Logger } from '../../../logger';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
 @ApiTags('survey')
 @Controller('/api/surveyHistory')
 export class SurveyHistoryController {

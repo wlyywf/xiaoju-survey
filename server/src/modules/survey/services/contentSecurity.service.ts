@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Word } from 'src/models/word.entity';
+import { Word } from '../../../models/word.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
 

@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository, FindOptionsOrder } from 'typeorm';
-import { SurveyMeta } from 'src/models/surveyMeta.entity';
-import { RECORD_STATUS, RECORD_SUB_STATUS } from 'src/enums';
+import { SurveyMeta } from '../../../models/surveyMeta.entity';
+import { RECORD_STATUS, RECORD_SUB_STATUS } from '../../../enums';
 import { ObjectId } from 'mongodb';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { PluginManager } from 'src/securityPlugin/pluginManager';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { PluginManager } from '../../../securityPlugin/pluginManager';
 
 @Injectable()
 export class SurveyMetaService {

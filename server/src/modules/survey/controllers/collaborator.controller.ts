@@ -12,19 +12,19 @@ import {
 import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 import * as Joi from 'joi';
 
-import { Authentication } from 'src/guards/authentication.guard';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { SurveyGuard } from 'src/guards/survey.guard';
+import { Authentication } from '../../../guards/authentication.guard';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { SurveyGuard } from '../../../guards/survey.guard';
 import {
   SURVEY_PERMISSION,
   SURVEY_PERMISSION_DESCRIPTION,
-} from 'src/enums/surveyPermission';
-import { Logger } from 'src/logger';
-import { WorkspaceMemberService } from 'src/modules/workspace/services/workspaceMember.service';
+} from '../../../enums/surveyPermission';
+import { Logger } from '../../../logger';
+import { WorkspaceMemberService } from '../../../modules/workspace/services/workspaceMember.service';
 
 import { CollaboratorService } from '../services/collaborator.service';
-import { UserService } from 'src/modules/auth/services/user.service';
+import { UserService } from '../../../modules/auth/services/user.service';
 
 import { CreateCollaboratorDto } from '../dto/createCollaborator.dto';
 import { ChangeUserPermissionDto } from '../dto/changeUserPermission.dto';

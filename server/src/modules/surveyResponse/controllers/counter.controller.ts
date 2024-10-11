@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Query } from '@nestjs/common';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
 import { CounterService } from '../services/counter.service';
 import { ApiTags } from '@nestjs/swagger';
 

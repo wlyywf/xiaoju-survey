@@ -4,8 +4,8 @@ import { get } from 'lodash';
 
 import { NoPermissionException } from '../exceptions/noPermissionException';
 
-import { WorkspaceMemberService } from 'src/modules/workspace/services/workspaceMember.service';
-import { ROLE_PERMISSION as WORKSPACE_ROLE_PERMISSION } from 'src/enums/workspace';
+import { WorkspaceMemberService } from '../modules/workspace/services/workspaceMember.service';
+import { ROLE_PERMISSION as WORKSPACE_ROLE_PERMISSION } from '../enums/workspace';
 
 @Injectable()
 export class WorkspaceGuard implements CanActivate {

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { SurveyHistory } from 'src/models/surveyHistory.entity';
-import { HISTORY_TYPE } from 'src/enums';
-import { SurveySchemaInterface } from 'src/interfaces/survey';
+import { SurveyHistory } from '../../../models/surveyHistory.entity';
+import { HISTORY_TYPE } from '../../../enums';
+import { SurveySchemaInterface } from '../../../interfaces/survey';
 
 @Injectable()
 export class SurveyHistoryService {

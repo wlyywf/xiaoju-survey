@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
 
-import { Workspace } from 'src/models/workspace.entity';
-import { SurveyMeta } from 'src/models/surveyMeta.entity';
+import { Workspace } from '../../../models/workspace.entity';
+import { SurveyMeta } from '../../../models/surveyMeta.entity';
 
 import { ObjectId } from 'mongodb';
 

@@ -21,18 +21,18 @@ import { SurveyHistoryService } from '../services/surveyHistory.service';
 import BannerData from '../template/banner/index.json';
 import { CreateSurveyDto } from '../dto/createSurvey.dto';
 
-import { Authentication } from 'src/guards/authentication.guard';
-import { HISTORY_TYPE } from 'src/enums';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { Logger } from 'src/logger';
-import { SurveyGuard } from 'src/guards/survey.guard';
-import { SURVEY_PERMISSION } from 'src/enums/surveyPermission';
+import { Authentication } from '../../../guards/authentication.guard';
+import { HISTORY_TYPE } from '../../../enums';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { Logger } from '../../../logger';
+import { SurveyGuard } from '../../../guards/survey.guard';
+import { SURVEY_PERMISSION } from '../../../enums/surveyPermission';
 
-import { WorkspaceGuard } from 'src/guards/workspace.guard';
-import { PERMISSION as WORKSPACE_PERMISSION } from 'src/enums/workspace';
+import { WorkspaceGuard } from '../../../guards/workspace.guard';
+import { PERMISSION as WORKSPACE_PERMISSION } from '../../../enums/workspace';
 import { SessionService } from '../services/session.service';
-import { UserService } from 'src/modules/auth/services/user.service';
+import { UserService } from '../../../modules/auth/services/user.service';
 
 @ApiTags('survey')
 @Controller('/api/survey')

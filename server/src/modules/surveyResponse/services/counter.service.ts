@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { Counter } from 'src/models/counter.entity';
+import { Counter } from '../../../models/counter.entity';
 
 @Injectable()
 export class CounterService {

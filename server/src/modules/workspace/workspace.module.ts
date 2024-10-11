@@ -8,15 +8,15 @@ import { SurveyMetaService } from '../survey/services/surveyMeta.service';
 
 import { WorkspaceController } from './controllers/workspace.controller';
 
-import { Workspace } from 'src/models/workspace.entity';
-import { WorkspaceMember } from 'src/models/workspaceMember.entity';
-import { SurveyMeta } from 'src/models/surveyMeta.entity';
+import { Workspace } from '../../models/workspace.entity';
+import { WorkspaceMember } from '../../models/workspaceMember.entity';
+import { SurveyMeta } from '../../models/surveyMeta.entity';
 
 import { AuthModule } from '../auth/auth.module';
 
-import { LoggerProvider } from 'src/logger/logger.provider';
-import { WorkspaceGuard } from 'src/guards/workspace.guard';
-import { PluginManagerProvider } from 'src/securityPlugin/pluginManager.provider';
+import { LoggerProvider } from '../../logger/logger.provider';
+import { WorkspaceGuard } from '../../guards/workspace.guard';
+import { PluginManagerProvider } from '../../securityPlugin/pluginManager.provider';
 
 @Module({
   imports: [

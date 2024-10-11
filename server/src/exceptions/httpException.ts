@@ -1,4 +1,4 @@
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { EXCEPTION_CODE } from '../enums/exceptionCode';
 
 export class HttpException extends Error {
   constructor(

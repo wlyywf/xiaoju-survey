@@ -2,11 +2,11 @@ import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { get } from 'lodash';
 
-import { WorkspaceMemberService } from 'src/modules/workspace/services/workspaceMember.service';
-import { CollaboratorService } from 'src/modules/survey/services/collaborator.service';
-import { SurveyMetaService } from 'src/modules/survey/services/surveyMeta.service';
-import { SurveyNotFoundException } from 'src/exceptions/surveyNotFoundException';
-import { NoPermissionException } from 'src/exceptions/noPermissionException';
+import { WorkspaceMemberService } from '../modules/workspace/services/workspaceMember.service';
+import { CollaboratorService } from '../modules/survey/services/collaborator.service';
+import { SurveyMetaService } from '../modules/survey/services/surveyMeta.service';
+import { SurveyNotFoundException } from '../exceptions/surveyNotFoundException';
+import { NoPermissionException } from '../exceptions/noPermissionException';
 
 @Injectable()
 export class SurveyGuard implements CanActivate {

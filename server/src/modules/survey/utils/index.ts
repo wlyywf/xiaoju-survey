@@ -5,7 +5,7 @@ import normalCode from '../template/surveyTemplate/survey/normal.json';
 import npsCode from '../template/surveyTemplate/survey/nps.json';
 import registerCode from '../template/surveyTemplate/survey/register.json';
 import voteCode from '../template/surveyTemplate/survey/vote.json';
-import { QUESTION_TYPE } from 'src/enums/question';
+import { QUESTION_TYPE } from '../../../enums/question';
 
 const schemaDataMap = {
   normal: normalCode,

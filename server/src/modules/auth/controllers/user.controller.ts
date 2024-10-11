@@ -8,10 +8,10 @@ import {
 } from '@nestjs/common';
 
 import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
-import { Authentication } from 'src/guards/authentication.guard';
+import { Authentication } from '../../../guards/authentication.guard';
 
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { HttpException } from 'src/exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { HttpException } from '../../../exceptions/httpException';
 
 import { UserService } from '../services/user.service';
 import { GetUserListDto } from '../dto/getUserList.dto';

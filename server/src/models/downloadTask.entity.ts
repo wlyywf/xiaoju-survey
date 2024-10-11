@@ -1,6 +1,6 @@
 import { Entity, Column } from 'typeorm';
 import { BaseEntity } from './base.entity';
-import { DOWNLOAD_TASK_STATUS } from 'src/enums/downloadTaskStatus';
+import { DOWNLOAD_TASK_STATUS } from '../enums/downloadTaskStatus';
 
 @Entity({ name: 'downloadTask' })
 export class DownloadTask extends BaseEntity {

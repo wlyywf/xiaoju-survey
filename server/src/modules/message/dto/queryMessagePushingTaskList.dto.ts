@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import Joi from 'joi';
-import { MESSAGE_PUSHING_HOOK } from 'src/enums/messagePushing';
+import { MESSAGE_PUSHING_HOOK } from '../../../enums/messagePushing';
 
 export class QueryMessagePushingTaskListDto {
   @ApiProperty({ description: '问卷id', required: false })

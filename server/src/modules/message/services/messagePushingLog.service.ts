@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { MessagePushingLog } from 'src/models/messagePushingLog.entity';
+import { MessagePushingLog } from '../../../models/messagePushingLog.entity';
 import { ObjectId } from 'mongodb';
 
 @Injectable()

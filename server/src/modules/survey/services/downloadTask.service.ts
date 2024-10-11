@@ -1,19 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { ResponseSchema } from 'src/models/responseSchema.entity';
-import { DownloadTask } from 'src/models/downloadTask.entity';
+import { ResponseSchema } from '../../../models/responseSchema.entity';
+import { DownloadTask } from '../../../models/downloadTask.entity';
 import { ObjectId } from 'mongodb';
-import { ResponseSchemaService } from 'src/modules/surveyResponse/services/responseScheme.service';
-import { SurveyResponse } from 'src/models/surveyResponse.entity';
+import { ResponseSchemaService } from '../../../modules/surveyResponse/services/responseScheme.service';
+import { SurveyResponse } from '../../../models/surveyResponse.entity';
 import { DataStatisticService } from './dataStatistic.service';
 import xlsx from 'node-xlsx';
 import { load } from 'cheerio';
 import { get } from 'lodash';
-import { FileService } from 'src/modules/file/services/file.service';
-import { Logger } from 'src/logger';
+import { FileService } from '../../../modules/file/services/file.service';
+import { Logger } from '../../../logger';
 import moment from 'moment';
-import { DOWNLOAD_TASK_STATUS } from 'src/enums/downloadTaskStatus';
+import { DOWNLOAD_TASK_STATUS } from '../../../enums/downloadTaskStatus';
 
 @Injectable()
 export class DownloadTaskService {

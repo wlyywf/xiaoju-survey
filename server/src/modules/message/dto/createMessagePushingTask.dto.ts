@@ -3,7 +3,7 @@ import Joi from 'joi';
 import {
   MESSAGE_PUSHING_TYPE,
   MESSAGE_PUSHING_HOOK,
-} from 'src/enums/messagePushing';
+} from '../../../enums/messagePushing';
 
 export class CreateMessagePushingTaskDto {
   @ApiProperty({ description: '任务名称', required: true })

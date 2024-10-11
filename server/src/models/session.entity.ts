@@ -1,7 +1,7 @@
 import { Entity, Column, Index, ObjectIdColumn } from 'typeorm';
 import { ObjectId } from 'mongodb';
 import { BaseEntity } from './base.entity';
-import { SESSION_STATUS } from 'src/enums/surveySessionStatus';
+import { SESSION_STATUS } from '../enums/surveySessionStatus';
 
 @Entity({ name: 'session' })
 export class Session extends BaseEntity {

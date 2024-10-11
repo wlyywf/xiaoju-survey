@@ -1,4 +1,4 @@
-import { ROLE as WORKSPACE_ROLE } from 'src/enums/workspace';
+import { ROLE as WORKSPACE_ROLE } from '../../../enums/workspace';
 export type Member = {
   userId: string;
   role: string;

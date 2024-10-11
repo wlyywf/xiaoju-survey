@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { User } from 'src/models/user.entity';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { hash256 } from 'src/utils/hash256';
+import { User } from '../../../models/user.entity';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { hash256 } from '../../../utils/hash256';
 import { ObjectId } from 'mongodb';
 
 @Injectable()

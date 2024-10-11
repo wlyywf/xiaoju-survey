@@ -8,11 +8,11 @@ import { CounterService } from './services/counter.service';
 import { ClientEncryptService } from './services/clientEncrypt.service';
 // import { RedisService } from '../redis/redis.service';
 
-import { ResponseSchema } from 'src/models/responseSchema.entity';
-import { Counter } from 'src/models/counter.entity';
-import { SurveyResponse } from 'src/models/surveyResponse.entity';
-import { ClientEncrypt } from 'src/models/clientEncrypt.entity';
-import { LoggerProvider } from 'src/logger/logger.provider';
+import { ResponseSchema } from '../../models/responseSchema.entity';
+import { Counter } from '../../models/counter.entity';
+import { SurveyResponse } from '../../models/surveyResponse.entity';
+import { ClientEncrypt } from '../../models/clientEncrypt.entity';
+import { LoggerProvider } from '../../logger/logger.provider';
 
 import { ClientEncryptController } from './controllers/clientEncrpt.controller';
 import { CounterController } from './controllers/counter.controller';

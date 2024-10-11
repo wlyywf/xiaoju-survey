@@ -1,5 +1,5 @@
 import { HttpException } from './httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { EXCEPTION_CODE } from '../enums/exceptionCode';
 
 export class SurveyNotFoundException extends HttpException {
   constructor(public readonly message: string) {

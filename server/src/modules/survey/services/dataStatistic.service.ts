@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { SurveyResponse } from 'src/models/surveyResponse.entity';
+import { SurveyResponse } from '../../../models/surveyResponse.entity';
 
 import moment from 'moment';
 import { keyBy } from 'lodash';
-import { DataItem } from 'src/interfaces/survey';
-import { ResponseSchema } from 'src/models/responseSchema.entity';
+import { DataItem } from '../../../interfaces/survey';
+import { ResponseSchema } from '../../../models/responseSchema.entity';
 import { getListHeadByDataList, transformAndMergeArrayFields } from '../utils';
-import { QUESTION_TYPE } from 'src/enums/question';
+import { QUESTION_TYPE } from '../../../enums/question';
 @Injectable()
 export class DataStatisticService {
   private radioType = [QUESTION_TYPE.RADIO_STAR, QUESTION_TYPE.RADIO_NPS];

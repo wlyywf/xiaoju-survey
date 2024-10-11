@@ -14,27 +14,27 @@ import {
 import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 import moment from 'moment';
 
-import { Authentication } from 'src/guards/authentication.guard';
-import { WorkspaceGuard } from 'src/guards/workspace.guard';
+import { Authentication } from '../../../guards/authentication.guard';
+import { WorkspaceGuard } from '../../../guards/workspace.guard';
 
 import { WorkspaceService } from '../services/workspace.service';
 import { WorkspaceMemberService } from '../services/workspaceMember.service';
 
 import { CreateWorkspaceDto } from '../dto/createWorkspace.dto';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
 import {
   ROLE as WORKSPACE_ROLE,
   PERMISSION as WORKSPACE_PERMISSION,
   ROLE_PERMISSION as WORKSPACE_ROLE_PERMISSION,
-} from 'src/enums/workspace';
+} from '../../../enums/workspace';
 import { splitMembers } from '../utils/splitMember';
-import { UserService } from 'src/modules/auth/services/user.service';
-import { SurveyMetaService } from 'src/modules/survey/services/surveyMeta.service';
-import { Logger } from 'src/logger';
+import { UserService } from '../../../modules/auth/services/user.service';
+import { SurveyMetaService } from '../../../modules/survey/services/surveyMeta.service';
+import { Logger } from '../../../logger';
 import { GetWorkspaceListDto } from '../dto/getWorkspaceList.dto';
-import { WorkspaceMember } from 'src/models/workspaceMember.entity';
-import { Workspace } from 'src/models/workspace.entity';
+import { WorkspaceMember } from '../../../models/workspaceMember.entity';
+import { Workspace } from '../../../models/workspace.entity';
 
 @ApiTags('workspace')
 @ApiBearerAuth()

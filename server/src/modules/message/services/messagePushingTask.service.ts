@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { MessagePushingTask } from 'src/models/messagePushingTask.entity';
-import { MESSAGE_PUSHING_HOOK } from 'src/enums/messagePushing';
+import { MessagePushingTask } from '../../../models/messagePushingTask.entity';
+import { MESSAGE_PUSHING_HOOK } from '../../../enums/messagePushing';
 import { CreateMessagePushingTaskDto } from '../dto/createMessagePushingTask.dto';
 import { UpdateMessagePushingTaskDto } from '../dto/updateMessagePushingTask.dto';
 import { ObjectId } from 'mongodb';
-import { MESSAGE_PUSHING_TYPE } from 'src/enums/messagePushing';
+import { MESSAGE_PUSHING_TYPE } from '../../../enums/messagePushing';
 import { MessagePushingLogService } from './messagePushingLog.service';
-import { httpPost } from 'src/utils/request';
+import { httpPost } from '../../../utils/request';
 
 @Injectable()
 export class MessagePushingTaskService {

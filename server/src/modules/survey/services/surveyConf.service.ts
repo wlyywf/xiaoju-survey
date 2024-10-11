@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { SurveyConf } from 'src/models/surveyConf.entity';
-import { HttpException } from 'src/exceptions/httpException';
-import { SurveyNotFoundException } from 'src/exceptions/surveyNotFoundException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { SurveySchemaInterface } from 'src/interfaces/survey';
+import { SurveyConf } from '../../../models/surveyConf.entity';
+import { HttpException } from '../../../exceptions/httpException';
+import { SurveyNotFoundException } from '../../../exceptions/surveyNotFoundException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { SurveySchemaInterface } from '../../../interfaces/survey';
 import { getSchemaBySurveyType } from '../utils';
 
 @Injectable()

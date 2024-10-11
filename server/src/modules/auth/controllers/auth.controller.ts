@@ -11,8 +11,8 @@ import { ConfigService } from '@nestjs/config';
 import { UserService } from '../services/user.service';
 import { CaptchaService } from '../services/captcha.service';
 import { AuthService } from '../services/auth.service';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
 import { create } from 'svg-captcha';
 import { ApiTags } from '@nestjs/swagger';
 

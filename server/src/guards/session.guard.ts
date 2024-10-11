@@ -1,8 +1,8 @@
 import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { get } from 'lodash';
-import { NoPermissionException } from 'src/exceptions/noPermissionException';
-import { SessionService } from 'src/modules/survey/services/session.service';
+import { NoPermissionException } from '../exceptions/noPermissionException';
+import { SessionService } from '../modules/survey/services/session.service';
 @Injectable()
 export class SessionGuard implements CanActivate {
   constructor(

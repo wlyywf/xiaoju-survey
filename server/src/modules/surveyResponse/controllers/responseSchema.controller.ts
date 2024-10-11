@@ -8,16 +8,16 @@ import {
   Query,
 } from '@nestjs/common';
 import { ResponseSchemaService } from '../services/responseScheme.service';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { RECORD_SUB_STATUS } from 'src/enums';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { RECORD_SUB_STATUS } from '../../../enums';
 import { ApiTags } from '@nestjs/swagger';
 import Joi from 'joi';
-import { Logger } from 'src/logger';
-import { SurveyNotFoundException } from 'src/exceptions/surveyNotFoundException';
-import { WhitelistType } from 'src/interfaces/survey';
-import { UserService } from 'src/modules/auth/services/user.service';
-import { WorkspaceMemberService } from 'src/modules/workspace/services/workspaceMember.service';
+import { Logger } from '../../../logger';
+import { SurveyNotFoundException } from '../../../exceptions/surveyNotFoundException';
+import { WhitelistType } from '../../../interfaces/survey';
+import { UserService } from '../../../modules/auth/services/user.service';
+import { WorkspaceMemberService } from '../../../modules/workspace/services/workspaceMember.service';
 
 @ApiTags('surveyResponse')
 @Controller('/api/responseSchema')

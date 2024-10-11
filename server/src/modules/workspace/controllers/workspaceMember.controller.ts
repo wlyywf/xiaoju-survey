@@ -9,8 +9,8 @@ import {
 } from '@nestjs/common';
 import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 
-import { Authentication } from 'src/guards/authentication.guard';
-import { WorkspaceGuard } from 'src/guards/workspace.guard';
+import { Authentication } from '../../../guards/authentication.guard';
+import { WorkspaceGuard } from '../../../guards/workspace.guard';
 
 import { WorkspaceMemberService } from '../services/workspaceMember.service';
 
@@ -18,9 +18,9 @@ import { CreateWorkspaceMemberDto } from '../dto/createWorkspaceMember.dto';
 import { UpdateWorkspaceMemberDto } from '../dto/updateWorkspaceMember.dto';
 import { DeleteWorkspaceMemberDto } from '../dto/deleteWorkspaceMember.dto';
 
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
-import { PERMISSION as WORKSPACE_PERMISSION } from 'src/enums/workspace';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
+import { PERMISSION as WORKSPACE_PERMISSION } from '../../../enums/workspace';
 
 @ApiTags('workspaceMember')
 @ApiBearerAuth()

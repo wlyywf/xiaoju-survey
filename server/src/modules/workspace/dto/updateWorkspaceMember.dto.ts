@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import Joi from 'joi';
-import { ROLE as WORKSPACE_ROLE } from 'src/enums/workspace';
+import { ROLE as WORKSPACE_ROLE } from '../../../enums/workspace';
 
 export class UpdateWorkspaceMemberDto {
   @ApiProperty({ description: '空间角色', required: true })

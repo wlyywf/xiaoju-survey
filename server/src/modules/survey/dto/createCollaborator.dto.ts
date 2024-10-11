@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import Joi from 'joi';
-import { SURVEY_PERMISSION } from 'src/enums/surveyPermission';
+import { SURVEY_PERMISSION } from '../../../enums/surveyPermission';
 
 export class CreateCollaboratorDto {
   @ApiProperty({ description: '问卷id', required: true })

@@ -12,16 +12,16 @@ import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 import { DataStatisticService } from '../services/dataStatistic.service';
 import { ResponseSchemaService } from '../../surveyResponse/services/responseScheme.service';
 
-import { Authentication } from 'src/guards/authentication.guard';
-import { PluginManager } from 'src/securityPlugin/pluginManager';
-import { SurveyGuard } from 'src/guards/survey.guard';
-import { SURVEY_PERMISSION } from 'src/enums/surveyPermission';
-import { Logger } from 'src/logger';
-import { HttpException } from 'src/exceptions/httpException';
-import { EXCEPTION_CODE } from 'src/enums/exceptionCode';
+import { Authentication } from '../../../guards/authentication.guard';
+import { PluginManager } from '../../../securityPlugin/pluginManager';
+import { SurveyGuard } from '../../../guards/survey.guard';
+import { SURVEY_PERMISSION } from '../../../enums/surveyPermission';
+import { Logger } from '../../../logger';
+import { HttpException } from '../../../exceptions/httpException';
+import { EXCEPTION_CODE } from '../../../enums/exceptionCode';
 import { AggregationStatisDto } from '../dto/aggregationStatis.dto';
 import { handleAggretionData } from '../utils';
-import { QUESTION_TYPE } from 'src/enums/question';
+import { QUESTION_TYPE } from '../../../enums/question';
 
 @ApiTags('survey')
 @ApiBearerAuth()

@@ -2,7 +2,7 @@ import { Controller, Get, HttpCode } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ClientEncryptService } from '../services/clientEncrypt.service';
 import * as forge from 'node-forge';
-import { ENCRYPT_TYPE } from 'src/enums/encrypt';
+import { ENCRYPT_TYPE } from '../../../enums/encrypt';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('surveyResponse')

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
-import { Session } from 'src/models/session.entity';
+import { Session } from '../../../models/session.entity';
 import { ObjectId } from 'mongodb';
-import { SESSION_STATUS } from 'src/enums/surveySessionStatus';
+import { SESSION_STATUS } from '../../../enums/surveySessionStatus';
 
 @Injectable()
 export class SessionService {
