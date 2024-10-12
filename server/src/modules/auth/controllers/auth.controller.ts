@@ -39,6 +39,7 @@ export class AuthController {
       captcha: string;
     },
   ) {
+    throw new HttpException('暂停注册', EXCEPTION_CODE.AUTHENTICATION_FAILED);
     if (!userInfo.password) {
       throw new HttpException('密码无效', EXCEPTION_CODE.PASSWORD_INVALID);
     }
