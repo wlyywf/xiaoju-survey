@@ -79,6 +79,7 @@ const popoverVirtualRef = ref()
 const popoverContent = ref('')
 
 const getContent = (content) => {
+  return content === 0 ? 0 : content || '未知'
   if (Array.isArray(content)) {
     return content.map(item => getContent(item)).join(',');
   }
