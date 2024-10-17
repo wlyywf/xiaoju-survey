@@ -3,6 +3,7 @@ import { get } from 'lodash-es'
 
 import BaseInput from '../BaseInput'
 import myMeta from './meta'
+import RichEditor from '@/common/Editor/RichEditor.vue'
 
 import './style.scss'
 
@@ -89,13 +90,22 @@ export default defineComponent({
         value: e.target.value
       })
     }
+    const handleChange = (val) => {
+      if(val == "<p><br></p>") val = ''
+      const key = props.field
+      emit('change', {
+        key,
+        value: val
+      })
+    }
     return {
       focusFlag,
       getLeftTextNumber,
       onBlur,
       onFocus,
       onInput,
-      onChange
+      onChange,
+      handleChange
     }
   },
   render() {
@@ -109,17 +119,15 @@ export default defineComponent({
     }
     return (
       <div>
-        <BaseInput
-          uiTarget="textarea"
-          customClass={focusFlag ? 'is-focused' : ''}
-          {...props}
-          {...{
-            onBlur: this.onBlur,
-            onFocus: this.onFocus,
-            onInput: this.onInput,
-            onChange: this.onChange
-          }}
-        />
+      <RichEditor
+        class="rich-editor rich-question"
+        modelValue={filterXSS(this.value)}
+        needUploadImage={true}
+        onChange={this.handleChange}
+        onCreated={(editor) => {
+          // editor?.focus()
+        }}
+      />
 
         {focusFlag && (
           <div class="text-number-tip">
