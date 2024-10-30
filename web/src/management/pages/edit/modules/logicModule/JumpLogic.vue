@@ -19,6 +19,7 @@ import {
 } from '@/management/hooks/useJumpLogicFlow'
 
 import NodeExtension from './components/nodeExtension/index'
+import { filterQuestionPreviewData } from '@/management/utils/index'
 
 const editStore = useEditStore()
 
@@ -26,7 +27,7 @@ const jumpLogicEngine = computed(() => {
   return editStore.jumpLogicEngine
 })
 const questionDataList = computed(() => {
-  return editStore.schema.questionDataList
+  return filterQuestionPreviewData(editStore.schema.questionDataList)
 })
 const config: Partial<LogicFlow.Options> = {
   snapline: false,

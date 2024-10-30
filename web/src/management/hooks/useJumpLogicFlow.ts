@@ -34,7 +34,7 @@ export const generateNodes = (questionDataList: [any]) => {
       properties: {
         questionType: item?.type,
         field: item.field,
-        title: cleanRichText(item?.title),
+        title: (item.showIndex ? item.indexNumber + '.' : '') + cleanRichText(item?.title),
         options
       }
     }
