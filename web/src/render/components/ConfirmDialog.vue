@@ -60,8 +60,8 @@ const emit = defineEmits<Emit>()
 const props = withDefaults(defineProps<Props>(), {
   visible: false,
   cancel: true,
-  cancelBtnText: '取消',
-  confirmBtnText: '确定',
+  cancelBtnText: 'No',
+  confirmBtnText: 'Yes',
   title: '',
   tips: '',
   autoClose: true

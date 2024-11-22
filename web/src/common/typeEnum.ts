@@ -12,14 +12,14 @@ export enum QUESTION_TYPE {
 
 // 题目类型标签映射对象
 export const typeTagLabels: Record<QUESTION_TYPE, string> = {
-  [QUESTION_TYPE.TEXT]: '单行输入框',
-  [QUESTION_TYPE.TEXTAREA]: '多行输入框',
-  [QUESTION_TYPE.RADIO]: '单选',
-  [QUESTION_TYPE.CHECKBOX]: '多选',
-  [QUESTION_TYPE.BINARY_CHOICE]: '判断',
-  [QUESTION_TYPE.RADIO_STAR]: '评分',
-  [QUESTION_TYPE.RADIO_NPS]: 'NPS评分',
-  [QUESTION_TYPE.VOTE]: '投票'
+  [QUESTION_TYPE.TEXT]: 'Single line input',
+  [QUESTION_TYPE.TEXTAREA]: 'Multi-line input',
+  [QUESTION_TYPE.RADIO]: 'Single Choice',
+  [QUESTION_TYPE.CHECKBOX]: 'Multiple Selection',
+  [QUESTION_TYPE.BINARY_CHOICE]: 'Judge',
+  [QUESTION_TYPE.RADIO_STAR]: 'Star',
+  [QUESTION_TYPE.RADIO_NPS]: 'NPS rate',
+  [QUESTION_TYPE.VOTE]: 'Vote'
 }
 
 // 输入类题型

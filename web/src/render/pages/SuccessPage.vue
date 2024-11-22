@@ -14,7 +14,7 @@
           replace
           class="reset-link"
         >
-          重新填写
+        Re-fill
         </router-link>
       </div>
       <LogoIcon :logo-conf="logoConf" :readonly="true" />
@@ -34,6 +34,7 @@ const logoConf = computed(() => {
   return surveyStore?.bottomConf || {}
 })
 const successMsg = computed(() => {
+  return 'success'
   const msgContent = (surveyStore?.submitConf as any)?.msgContent || {}
   return msgContent?.msg_200 || '提交成功'
 })
