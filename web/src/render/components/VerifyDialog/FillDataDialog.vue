@@ -1,6 +1,6 @@
 <template>
   <ConfirmDialog
-    :title="fillAnswer ? '是否继续上次填写的内容？' : '是否继续上次提交的内容？'"
+    :title="fillAnswer ? 'Do you want to continue with the content filled in last time?' : 'Do you want to continue with the last submission?'"
     @confirm="handleSubmit"
   />
 </template>
