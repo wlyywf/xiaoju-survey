@@ -29,6 +29,7 @@ import { get as _get } from 'lodash-es'
 import '@wangeditor/editor/dist/css/style.css'
 import './styles/reset-wangeditor.scss'
 import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
+import { i18nChangeLanguage } from '@wangeditor/editor'
 
 import { useUserStore } from '@/management/stores/user'
 import { replacePxWithRem } from './utils'
@@ -43,6 +44,7 @@ const props = defineProps({
 const curValue = ref('')
 const editorRef = shallowRef()
 const showToolbar = ref(props.staticToolBar)
+i18nChangeLanguage('en')
 
 const mode = 'simple'
 

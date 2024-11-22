@@ -82,7 +82,7 @@ export function generateValidArr(
     if (!isInput) {
       validArr.push({
         required: true,
-        message: '此项未填，请填写完整'
+        message: 'this field is required'
         // trigger: 'change|blur'
       })
     } else {
@@ -92,7 +92,7 @@ export function generateValidArr(
           let errors = []
           let tip = ''
           if (value === '' || value?.replace(/\s*/, '') === '') {
-            tip = '此项未填，请填写完整'
+            tip = 'this field is required'
           }
           if (tip) {
             errors = [tip]
